@@ -1,0 +1,4 @@
+{
+  "replace": false,
+  "values": [{"id": "variantcomposters:crimson_composter","required": false},{"id": "variantcomposters:warped_composter","required": false}]
+}
