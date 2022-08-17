@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class Init  implements ModInitializer {
+public class Initialise implements ModInitializer {
 
 	public static final String MOD_ID = "variantcomposters";
 
@@ -27,7 +27,7 @@ public class Init  implements ModInitializer {
 	}
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final ItemGroup VARIANT_COMPOSTERS = FabricItemGroupBuilder.build(new Identifier(Init.MOD_ID, "variant_composters"),
+	public static final ItemGroup VARIANT_COMPOSTERS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variant_composters"),
 			() -> new ItemStack(Items.COMPOSTER));
 	public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
 
@@ -55,6 +55,10 @@ public class Init  implements ModInitializer {
 			woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
 			woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
 			woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
+		}
+		if (FabricLoader.getInstance().isModLoaded("simplemango")) {
+			Composters.addSimpleMangoComposters();
+			woodTypes.add(Pair.of("mango", new String[]{"simplemango"}));
 		}
 	}
 }

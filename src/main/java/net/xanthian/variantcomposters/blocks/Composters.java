@@ -1,22 +1,16 @@
 package net.xanthian.variantcomposters.blocks;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.fabricmc.loader.api.FabricLoader;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-import net.xanthian.variantcomposters.Init;
+import net.xanthian.variantcomposters.Initialise;
 
 public class Composters {
-
 
     public static void addVanillaComposters() {
         VariantComposterBlock ACACIA_COMPOSTER = new VariantComposterBlock();
@@ -50,11 +44,18 @@ public class Composters {
         VariantComposterBlock SHADOW_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("shadow_composter", SHADOW_COMPOSTER, true);
     }
+    public static void addSimpleMangoComposters() {
+        VariantComposterBlock MANGO_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("mango_composter", MANGO_COMPOSTER, true);
+    }
+
+    // To-do : Updated Blockus, Promenade, Bewitchment, Biome Makeover, Ecologics, Enriched, Twigs, Croptopia, Wilder World
+    // Not yet updated : Botania, Spectrum, Paradise Lost
 
     private static void registerComposterBlock(String Id, Block block, boolean canBurn) {
-        Identifier identifier = new Identifier(Init.MOD_ID, Id.toLowerCase());
+        Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
         Registry.register(Registry.BLOCK, identifier, block);
-        Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Init.VARIANT_COMPOSTERS)));
+        Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Initialise.VARIANT_COMPOSTERS)));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
     }
 }

@@ -12,6 +12,7 @@
     {"id":"variantcomposters:jade_composter", "required": false},
     {"id":"variantcomposters:moon_composter", "required": false},
     {"id":"variantcomposters:shadow_composter", "required": false},
-    {"id":"variantcomposters:rubber_composter", "required": false}
+    {"id":"variantcomposters:rubber_composter", "required": false},
+    {"id":"variantcomposters:mango_composter", "required": false}
   ]
 }
