@@ -48,6 +48,11 @@ public class Composters {
         VariantComposterBlock MANGO_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("mango_composter", MANGO_COMPOSTER, true);
     }
+    public static void addTraverseComposters() {
+        VariantComposterBlock FIR_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("fir_composter", FIR_COMPOSTER, true);
+
+    }
 
     // To-do : Updated Blockus, Promenade, Bewitchment, Biome Makeover, Ecologics, Enriched, Twigs, Croptopia, Wilder World
     // Not yet updated : Botania, Spectrum, Paradise Lost

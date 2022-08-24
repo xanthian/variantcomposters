@@ -34,31 +34,35 @@ public class Initialise implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-			Composters.addVanillaComposters();
 			woodTypes.add(Pair.of("acacia", new String[0]));
 			woodTypes.add(Pair.of("birch", new String[0]));
 			woodTypes.add(Pair.of("dark_oak", new String[0]));
 			woodTypes.add(Pair.of("jungle", new String[0]));
 			woodTypes.add(Pair.of("oak", new String[0]));
 			woodTypes.add(Pair.of("mangrove", new String[0]));
+			Composters.addVanillaComposters();
 		if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-			Composters.addNetherComposters();
 			woodTypes.add(Pair.of("crimson", new String[0]));
 			woodTypes.add(Pair.of("warped", new String[0]));
+			Composters.addNetherComposters();
 		}
 		if (FabricLoader.getInstance().isModLoaded("techreborn")) {
-			Composters.addTechRebornComposters();
 			woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
+			Composters.addTechRebornComposters();
 		}
 		if (FabricLoader.getInstance().isModLoaded("arclight")) {
-			Composters.addEpicPaladinsComposters();
 			woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
 			woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
 			woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
+			Composters.addEpicPaladinsComposters();
 		}
 		if (FabricLoader.getInstance().isModLoaded("simplemango")) {
-			Composters.addSimpleMangoComposters();
 			woodTypes.add(Pair.of("mango", new String[]{"simplemango"}));
+			Composters.addSimpleMangoComposters();
+		}
+		if (FabricLoader.getInstance().isModLoaded("traverse")) {
+			woodTypes.add(Pair.of("fir", new String[]{"traverse"}));
+			Composters.addTraverseComposters();
 		}
 	}
 }

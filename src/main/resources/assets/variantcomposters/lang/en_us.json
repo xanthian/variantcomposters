@@ -21,8 +21,12 @@
   "_comment4": "Simple Mango",
   "block.variantcomposters.mango_composter": "Mango Composter",
 
-  "_comment11": "Epic Paladins",
+  "_comment5": "Epic Paladins",
   "block.variantcomposters.jade_composter": "Jade Birch Composter",
   "block.variantcomposters.moon_composter": "Moon Composter",
-  "block.variantcomposters.shadow_composter": "Shadow Composter"
+  "block.variantcomposters.shadow_composter": "Shadow Composter",
+
+  "_comment6": "Traverse",
+  "block.variantcomposters.fir_composter": "Fir Composter"
+
 }
