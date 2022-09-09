@@ -51,7 +51,26 @@ public class Composters {
     public static void addTraverseComposters() {
         VariantComposterBlock FIR_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("fir_composter", FIR_COMPOSTER, true);
-
+    }
+    public static void  addTerrestriaComposters() {
+        VariantComposterBlock CYPRESS_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("cypress_composter", CYPRESS_COMPOSTER, true);
+        VariantComposterBlock HEMLOCK_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("hemlock_composter", HEMLOCK_COMPOSTER, true);
+        VariantComposterBlock JAPANESE_MAPLE_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("japanese_maple_composter", JAPANESE_MAPLE_COMPOSTER, true);
+        VariantComposterBlock RAINBOW_EUCALYPTUS_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("rainbow_eucalyptus_composter", RAINBOW_EUCALYPTUS_COMPOSTER, true);
+        VariantComposterBlock REDWOOD_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("redwood_composter", REDWOOD_COMPOSTER, true);
+        VariantComposterBlock RUBBER_COMPOSTER2 = new VariantComposterBlock();
+        registerComposterBlock("rubber_composter2", RUBBER_COMPOSTER2, true);
+        VariantComposterBlock SAKURA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("sakura_composter", SAKURA_COMPOSTER, true);
+        VariantComposterBlock WILLOW_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("willow_composter", WILLOW_COMPOSTER, true);
+        VariantComposterBlock YUCCA_PALM_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("yucca_palm_composter", YUCCA_PALM_COMPOSTER, true);
     }
 
     // To-do : Updated Blockus, Promenade, Bewitchment, Biome Makeover, Ecologics, Enriched, Twigs, Croptopia, Wilder World

@@ -14,6 +14,15 @@
     {"id":"variantcomposters:shadow_composter", "required": false},
     {"id":"variantcomposters:rubber_composter", "required": false},
     {"id":"variantcomposters:mango_composter", "required": false},
-    {"id":"variantcomposters:fir_composter", "required": false}
+    {"id":"variantcomposters:fir_composter", "required": false},
+    {"id":"variantcomposters:cypress_composter", "required": false},
+    {"id":"variantcomposters:hemlock_composter", "required": false},
+    {"id":"variantcomposters:japanese_maple_composter", "required": false},
+    {"id":"variantcomposters:rainbow_eucalyptus_composter", "required": false},
+    {"id":"variantcomposters:redwood_composter", "required": false},
+    {"id":"variantcomposters:rubber_composter2", "required": false},
+    {"id":"variantcomposters:sakura_composter", "required": false},
+    {"id":"variantcomposters:willow_composter", "required": false},
+    {"id":"variantcomposters:yucca_palm_composter", "required": false}
   ]
 }

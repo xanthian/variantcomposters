@@ -27,6 +27,16 @@
   "block.variantcomposters.shadow_composter": "Shadow Composter",
 
   "_comment6": "Traverse",
-  "block.variantcomposters.fir_composter": "Fir Composter"
+  "block.variantcomposters.fir_composter": "Fir Composter",
 
+  "_comment7": "Terrestria",
+  "block.variantcomposters.cypress_composter": "Cypress Composter",
+  "block.variantcomposters.hemlock_composter": "Hemlock Composter",
+  "block.variantcomposters.japanese_maple_composter": "Japanese Maple Composter",
+  "block.variantcomposters.rainbow_eucalyptus_composter": "Rainbow Eucalyptus Composter",
+  "block.variantcomposters.redwood_composter": "Redwood Composter",
+  "block.variantcomposters.rubber_composter2": "Rubber Composter",
+  "block.variantcomposters.sakura_composter": "Sakura Composter",
+  "block.variantcomposters.willow_composter": "Willow Composter",
+  "block.variantcomposters.yucca_palm_composter": "Yucca Palm Composter"
 }

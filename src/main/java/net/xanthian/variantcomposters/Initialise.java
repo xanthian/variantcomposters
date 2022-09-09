@@ -64,5 +64,17 @@ public class Initialise implements ModInitializer {
 			woodTypes.add(Pair.of("fir", new String[]{"traverse"}));
 			Composters.addTraverseComposters();
 		}
+		if (FabricLoader.getInstance().isModLoaded("terrestria")) {
+			woodTypes.add(Pair.of("cypress", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("hemlock", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("japanese_maple", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("rainbow_eucalyptus", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("redwood", new String[]{"terrestria"}));
+			//woodTypes.add(Pair.of("rubber", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("sakura", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("willow", new String[]{"terrestria"}));
+			woodTypes.add(Pair.of("yucca_palm", new String[]{"terrestria"}));
+			Composters.addTerrestriaComposters();
+		}
 	}
 }
