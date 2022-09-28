@@ -23,6 +23,8 @@ public class Composters {
         registerComposterBlock("jungle_composter", JUNGLE_COMPOSTER, true);
         VariantComposterBlock OAK_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("oak_composter", OAK_COMPOSTER, true);
+    }
+    public static void addVanilla119Composter() {
         VariantComposterBlock MANGROVE_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("mangrove_composter", MANGROVE_COMPOSTER, true);
     }
@@ -52,7 +54,7 @@ public class Composters {
         VariantComposterBlock FIR_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("fir_composter", FIR_COMPOSTER, true);
     }
-    public static void  addTerrestriaComposters() {
+    public static void addTerrestriaComposters() {
         VariantComposterBlock CYPRESS_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("cypress_composter", CYPRESS_COMPOSTER, true);
         VariantComposterBlock HEMLOCK_COMPOSTER = new VariantComposterBlock();
@@ -72,6 +74,13 @@ public class Composters {
         VariantComposterBlock YUCCA_PALM_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("yucca_palm_composter", YUCCA_PALM_COMPOSTER, true);
     }
+    public static void addCinderscapesComposters() {
+        VariantComposterBlock SCORCHED_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("scorched_composter", SCORCHED_COMPOSTER, true);
+        VariantComposterBlock UMBRAL_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("umbral_composter", UMBRAL_COMPOSTER, true);
+    }
+
 
     // To-do : Updated Blockus, Promenade, Bewitchment, Biome Makeover, Ecologics, Enriched, Twigs, Croptopia, Wilder World
     // Not yet updated : Botania, Spectrum, Paradise Lost

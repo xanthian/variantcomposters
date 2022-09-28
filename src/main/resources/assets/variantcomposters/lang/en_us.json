@@ -38,5 +38,9 @@
   "block.variantcomposters.rubber_composter2": "Rubber Composter",
   "block.variantcomposters.sakura_composter": "Sakura Composter",
   "block.variantcomposters.willow_composter": "Willow Composter",
-  "block.variantcomposters.yucca_palm_composter": "Yucca Palm Composter"
+  "block.variantcomposters.yucca_palm_composter": "Yucca Palm Composter",
+
+  "_comment8": "Cinderscapes",
+  "block.variantcomposters.scorched_composter": "Scorched Composter",
+  "block.variantcomposters.umbral_composter": "Umbral Composter"
 }

@@ -23,6 +23,8 @@
     {"id":"variantcomposters:rubber_composter2", "required": false},
     {"id":"variantcomposters:sakura_composter", "required": false},
     {"id":"variantcomposters:willow_composter", "required": false},
-    {"id":"variantcomposters:yucca_palm_composter", "required": false}
+    {"id":"variantcomposters:yucca_palm_composter", "required": false},
+    {"id":"variantcomposters:scorched_composter", "required": false},
+    {"id":"variantcomposters:umbral_composter", "required": false}
   ]
 }

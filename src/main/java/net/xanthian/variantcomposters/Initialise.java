@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.SharedConstants;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -39,8 +40,12 @@ public class Initialise implements ModInitializer {
 			woodTypes.add(Pair.of("dark_oak", new String[0]));
 			woodTypes.add(Pair.of("jungle", new String[0]));
 			woodTypes.add(Pair.of("oak", new String[0]));
-			woodTypes.add(Pair.of("mangrove", new String[0]));
 			Composters.addVanillaComposters();
+
+		if (SharedConstants.getGameVersion().getName().startsWith("1.19")) {
+			woodTypes.add(Pair.of("mangrove", new String[0]));
+			Composters.addVanilla119Composter();
+		}
 		if (!FabricLoader.getInstance().isModLoaded("betternether")) {
 			woodTypes.add(Pair.of("crimson", new String[0]));
 			woodTypes.add(Pair.of("warped", new String[0]));
@@ -75,6 +80,11 @@ public class Initialise implements ModInitializer {
 			woodTypes.add(Pair.of("willow", new String[]{"terrestria"}));
 			woodTypes.add(Pair.of("yucca_palm", new String[]{"terrestria"}));
 			Composters.addTerrestriaComposters();
+		}
+		if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
+			woodTypes.add(Pair.of("scorched", new String[]{"cinderscapes"}));
+			woodTypes.add(Pair.of("umbral", new String[]{"cinderscapes"}));
+			Composters.addCinderscapesComposters();
 		}
 	}
 }
