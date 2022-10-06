@@ -12,6 +12,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
 import net.xanthian.variantcomposters.blocks.Composters;
+import net.xanthian.variantcomposters.util.ModPOITypes;
 import org.apache.commons.lang3.tuple.Pair;
 
 import org.slf4j.Logger;
@@ -86,5 +87,6 @@ public class Initialise implements ModInitializer {
 			woodTypes.add(Pair.of("umbral", new String[]{"cinderscapes"}));
 			Composters.addCinderscapesComposters();
 		}
+		ModPOITypes.init();
 	}
 }

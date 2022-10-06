@@ -1,5 +1,6 @@
 package net.xanthian.variantcomposters.blocks;
 
+import com.google.common.collect.Maps;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 
@@ -10,7 +11,11 @@ import net.minecraft.util.registry.Registry;
 
 import net.xanthian.variantcomposters.Initialise;
 
+import java.util.Map;
+
 public class Composters {
+
+    public static Map<Identifier, Block> MOD_COMPOSTERS = Maps.newHashMap();
 
     public static void addVanillaComposters() {
         VariantComposterBlock ACACIA_COMPOSTER = new VariantComposterBlock();
@@ -90,5 +95,6 @@ public class Composters {
         Registry.register(Registry.BLOCK, identifier, block);
         Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Initialise.VARIANT_COMPOSTERS)));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
+        MOD_COMPOSTERS.put(identifier, block);
     }
 }
