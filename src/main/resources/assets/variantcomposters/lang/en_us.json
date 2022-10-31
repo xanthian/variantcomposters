@@ -1,8 +1,6 @@
 {
-  "_comment0": "Creative Tab",
   "itemGroup.variantcomposters.variant_composters": "Variant Composters",
 
-  "_comment1": "Vanilla",
   "block.minecraft.composter": "Spruce Composter",
 
   "block.variantcomposters.acacia_composter": "Acacia Composter",
@@ -11,25 +9,20 @@
   "block.variantcomposters.jungle_composter": "Jungle Composter",
   "block.variantcomposters.oak_composter": "Oak Composter",
   "block.variantcomposters.mangrove_composter": "Mangrove Composter",
-  "_comment2": "Vanilla Nether",
+
   "block.variantcomposters.crimson_composter": "Crimson Composter",
   "block.variantcomposters.warped_composter": "Warped Composter",
 
-  "_comment3": "Tech Reborn",
   "block.variantcomposters.rubber_composter": "Rubber Composter",
 
-  "_comment4": "Simple Mango",
   "block.variantcomposters.mango_composter": "Mango Composter",
 
-  "_comment5": "Epic Paladins",
   "block.variantcomposters.jade_composter": "Jade Birch Composter",
   "block.variantcomposters.moon_composter": "Moon Composter",
   "block.variantcomposters.shadow_composter": "Shadow Composter",
 
-  "_comment6": "Traverse",
   "block.variantcomposters.fir_composter": "Fir Composter",
 
-  "_comment7": "Terrestria",
   "block.variantcomposters.cypress_composter": "Cypress Composter",
   "block.variantcomposters.hemlock_composter": "Hemlock Composter",
   "block.variantcomposters.japanese_maple_composter": "Japanese Maple Composter",
@@ -40,7 +33,14 @@
   "block.variantcomposters.willow_composter": "Willow Composter",
   "block.variantcomposters.yucca_palm_composter": "Yucca Palm Composter",
 
-  "_comment8": "Cinderscapes",
   "block.variantcomposters.scorched_composter": "Scorched Composter",
-  "block.variantcomposters.umbral_composter": "Umbral Composter"
+  "block.variantcomposters.umbral_composter": "Umbral Composter",
+
+  "block.variantcomposters.azule_azalea_composter": "Azule Azalea Composter",
+  "block.variantcomposters.bright_azalea_composter": "Bright Azalea Composter",
+  "block.variantcomposters.fiss_azalea_composter": "Fiss Azalea Composter",
+  "block.variantcomposters.roze_azalea_composter": "Roze Azalea Composter",
+  "block.variantcomposters.tecal_azalea_composter": "Tecal Azalea Composter",
+  "block.variantcomposters.titanium_azalea_composter": "Titanium Azalea Composter",
+  "block.variantcomposters.walnut_azalea_composter": "Walnut Azalea Composter"
 }

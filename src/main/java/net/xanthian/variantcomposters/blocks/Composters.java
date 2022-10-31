@@ -85,7 +85,22 @@ public class Composters {
         VariantComposterBlock UMBRAL_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("umbral_composter", UMBRAL_COMPOSTER, true);
     }
-
+    public static void addColorfulAzaleasComposters() {
+        VariantComposterBlock AZULE_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("azule_azalea_composter", AZULE_AZALEA_COMPOSTER, true);
+        VariantComposterBlock BRIGHT_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("bright_azalea_composter", BRIGHT_AZALEA_COMPOSTER, true);
+        VariantComposterBlock FISS_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("fiss_azalea_composter", FISS_AZALEA_COMPOSTER, true);
+        VariantComposterBlock ROZE_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("roze_azalea_composter", ROZE_AZALEA_COMPOSTER, true);
+        VariantComposterBlock TECAL_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("tecal_azalea_composter", TECAL_AZALEA_COMPOSTER, true);
+        VariantComposterBlock TITANIUM_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("titanium_azalea_composter", TITANIUM_AZALEA_COMPOSTER, true);
+        VariantComposterBlock WALNUT_AZALEA_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("walnut_azalea_composter", WALNUT_AZALEA_COMPOSTER, true);
+    }
 
     // To-do : Updated Blockus, Promenade, Bewitchment, Biome Makeover, Ecologics, Enriched, Twigs, Croptopia, Wilder World
     // Not yet updated : Botania, Spectrum, Paradise Lost

@@ -25,6 +25,13 @@
     {"id":"variantcomposters:willow_composter", "required": false},
     {"id":"variantcomposters:yucca_palm_composter", "required": false},
     {"id":"variantcomposters:scorched_composter", "required": false},
-    {"id":"variantcomposters:umbral_composter", "required": false}
+    {"id":"variantcomposters:umbral_composter", "required": false},
+    {"id":"variantcomposters:azule_azalea_composter", "required": false},
+    {"id":"variantcomposters:bright_azalea_composter", "required": false},
+    {"id":"variantcomposters:fiss_azalea_composter", "required": false},
+    {"id":"variantcomposters:roze_azalea_composter", "required": false},
+    {"id":"variantcomposters:tecal_azalea_composter", "required": false},
+    {"id":"variantcomposters:titanium_azalea_composter", "required": false},
+    {"id":"variantcomposters:walnut_azalea_composter", "required": false}
   ]
 }
