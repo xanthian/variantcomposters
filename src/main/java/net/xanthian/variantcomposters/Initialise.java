@@ -15,20 +15,12 @@ import net.xanthian.variantcomposters.blocks.Composters;
 import net.xanthian.variantcomposters.util.ModPOITypes;
 import org.apache.commons.lang3.tuple.Pair;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 public class Initialise implements ModInitializer {
 
 	public static final String MOD_ID = "variantcomposters";
 
-	public static Identifier ID(String path) {
-		return new Identifier(MOD_ID, path);
-	}
-
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static final ItemGroup VARIANT_COMPOSTERS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variant_composters"),
 			() -> new ItemStack(Items.COMPOSTER));
 	public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
@@ -96,6 +88,11 @@ public class Initialise implements ModInitializer {
 			woodTypes.add(Pair.of("titanium_azalea", new String[]{"colorful-azaleas"}));
 			woodTypes.add(Pair.of("walnut_azalea", new String[]{"colorful-azaleas"}));
 			Composters.addColorfulAzaleasComposters();
+		}
+		if(FabricLoader.getInstance().isModLoaded("wilderwild")) {
+			woodTypes.add(Pair.of("baobab", new String[]{"wilderwild"}));
+			//woodTypes.add(Pair.of("cypress", new String[]{"wilderwild"}));
+			Composters.registerWilderWildsComposters();
 		}
 
 		ModPOITypes.init();

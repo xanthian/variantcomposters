@@ -101,6 +101,12 @@ public class Composters {
         VariantComposterBlock WALNUT_AZALEA_COMPOSTER = new VariantComposterBlock();
         registerComposterBlock("walnut_azalea_composter", WALNUT_AZALEA_COMPOSTER, true);
     }
+    public static void registerWilderWildsComposters() {
+        VariantComposterBlock BAOBAB_COMPOSTER = new VariantComposterBlock();
+        registerComposterBlock("baobab_composter", BAOBAB_COMPOSTER, true);
+        VariantComposterBlock CYPRESS_COMPOSTER3 = new VariantComposterBlock();
+        registerComposterBlock("cypress_composter3", CYPRESS_COMPOSTER3, true);
+    }
 
     // To-do : Updated Blockus, Promenade, Bewitchment, Biome Makeover, Ecologics, Enriched, Twigs, Croptopia, Wilder World
     // Not yet updated : Botania, Spectrum, Paradise Lost

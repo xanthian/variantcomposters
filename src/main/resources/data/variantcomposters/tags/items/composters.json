@@ -32,6 +32,8 @@
     {"id":"variantcomposters:roze_azalea_composter", "required": false},
     {"id":"variantcomposters:tecal_azalea_composter", "required": false},
     {"id":"variantcomposters:titanium_azalea_composter", "required": false},
-    {"id":"variantcomposters:walnut_azalea_composter", "required": false}
+    {"id":"variantcomposters:walnut_azalea_composter", "required": false},
+    {"id":"variantcomposters:baobab_composter", "required": false},
+    {"id":"variantcomposters:cypress_composter3", "required": false}
   ]
 }

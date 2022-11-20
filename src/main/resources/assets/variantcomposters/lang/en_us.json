@@ -42,5 +42,8 @@
   "block.variantcomposters.roze_azalea_composter": "Roze Azalea Composter",
   "block.variantcomposters.tecal_azalea_composter": "Tecal Azalea Composter",
   "block.variantcomposters.titanium_azalea_composter": "Titanium Azalea Composter",
-  "block.variantcomposters.walnut_azalea_composter": "Walnut Azalea Composter"
+  "block.variantcomposters.walnut_azalea_composter": "Walnut Azalea Composter",
+
+  "block.variantcomposters.baobab_composter": "Baobab Composter",
+  "block.variantcomposters.cypress_composter3": "Cypress Composter"
 }
