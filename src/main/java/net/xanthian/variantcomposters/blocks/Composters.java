@@ -6,8 +6,9 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 import net.xanthian.variantcomposters.Initialise;
 
@@ -113,8 +114,8 @@ public class Composters {
 
     private static void registerComposterBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
-        Registry.register(Registry.BLOCK, identifier, block);
-        Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Initialise.VARIANT_COMPOSTERS)));
+        Registry.register(Registries.BLOCK, identifier, block);
+        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
         MOD_COMPOSTERS.put(identifier, block);
     }

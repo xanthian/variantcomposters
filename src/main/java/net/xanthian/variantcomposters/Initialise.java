@@ -2,16 +2,12 @@ package net.xanthian.variantcomposters;
 
 import com.google.common.collect.Lists;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.SharedConstants;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.util.Identifier;
 
 import net.xanthian.variantcomposters.blocks.Composters;
+import net.xanthian.variantcomposters.util.ModItemGroup;
 import net.xanthian.variantcomposters.util.ModPOITypes;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -21,12 +17,12 @@ public class Initialise implements ModInitializer {
 
 	public static final String MOD_ID = "variantcomposters";
 
-	public static final ItemGroup VARIANT_COMPOSTERS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variant_composters"),
-			() -> new ItemStack(Items.COMPOSTER));
 	public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
 
 	@Override
 	public void onInitialize() {
+
+		ModItemGroup.registerGroup();
 
 			woodTypes.add(Pair.of("acacia", new String[0]));
 			woodTypes.add(Pair.of("birch", new String[0]));
