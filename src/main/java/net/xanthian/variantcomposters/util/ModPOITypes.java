@@ -8,7 +8,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraft.world.poi.PointOfInterestTypes;
-import net.xanthian.variantcomposters.blocks.Composters;
+import net.xanthian.variantcomposters.block.Composters;
 import net.xanthian.variantcomposters.mixin.PointOfInterestTypesAccessor;
 
 import java.util.ArrayList;

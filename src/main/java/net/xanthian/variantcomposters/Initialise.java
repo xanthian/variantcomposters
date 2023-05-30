@@ -1,96 +1,57 @@
 package net.xanthian.variantcomposters;
 
-import com.google.common.collect.Lists;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.SharedConstants;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 
-import net.xanthian.variantcomposters.blocks.Composters;
-import net.xanthian.variantcomposters.util.ModItemGroup;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.xanthian.variantcomposters.block.Composters;
 import net.xanthian.variantcomposters.util.ModPOITypes;
-import org.apache.commons.lang3.tuple.Pair;
-
-import java.util.List;
+import net.xanthian.variantcomposters.util.ModRegistries;
 
 public class Initialise implements ModInitializer {
 
 	public static final String MOD_ID = "variantcomposters";
 
-	public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
+	public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "variantcomposters"));
 
 	@Override
 	public void onInitialize() {
+		// Custom Item Group
+		Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
+				.displayName(Text.translatable("variantcomposters.group.variantcomposters"))
+				.icon(() -> new ItemStack(Composters.MANGROVE_COMPOSTER))
+				.entries((context, entries) -> {
+					entries.add(Composters.ACACIA_COMPOSTER);
+					entries.add(Composters.BAMBOO_COMPOSTER);
+					entries.add(Composters.BIRCH_COMPOSTER);
+					entries.add(Composters.CHERRY_COMPOSTER);
+					entries.add(Composters.CRIMSON_COMPOSTER);
+					entries.add(Composters.DARK_OAK_COMPOSTER);
+					entries.add(Composters.JUNGLE_COMPOSTER);
+					entries.add(Composters.MANGROVE_COMPOSTER);
+					entries.add(Composters.OAK_COMPOSTER);
+					entries.add(Blocks.COMPOSTER); // Spruce
+					entries.add(Composters.WARPED_COMPOSTER);
+				})
+				.build());
 
-		ModItemGroup.registerGroup();
+		// Composter Registration
+		Composters.registerVanillaComposters();
 
-			woodTypes.add(Pair.of("acacia", new String[0]));
-			woodTypes.add(Pair.of("birch", new String[0]));
-			woodTypes.add(Pair.of("dark_oak", new String[0]));
-			woodTypes.add(Pair.of("jungle", new String[0]));
-			woodTypes.add(Pair.of("oak", new String[0]));
-			Composters.addVanillaComposters();
+		// Fuel & Flammable Block registration
+		ModRegistries.registerFuelandFlammable();
 
-		if (SharedConstants.getGameVersion().getName().startsWith("1.19")) {
-			woodTypes.add(Pair.of("mangrove", new String[0]));
-			Composters.addVanilla119Composter();
-		}
-		if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-			woodTypes.add(Pair.of("crimson", new String[0]));
-			woodTypes.add(Pair.of("warped", new String[0]));
-			Composters.addNetherComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("techreborn")) {
-			woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
-			Composters.addTechRebornComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("arclight")) {
-			woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
-			woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
-			woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
-			Composters.addEpicPaladinsComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("simplemango")) {
-			woodTypes.add(Pair.of("mango", new String[]{"simplemango"}));
-			Composters.addSimpleMangoComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("traverse")) {
-			woodTypes.add(Pair.of("fir", new String[]{"traverse"}));
-			Composters.addTraverseComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("terrestria")) {
-			woodTypes.add(Pair.of("cypress", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("hemlock", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("japanese_maple", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("rainbow_eucalyptus", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("redwood", new String[]{"terrestria"}));
-			//woodTypes.add(Pair.of("rubber", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("sakura", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("willow", new String[]{"terrestria"}));
-			woodTypes.add(Pair.of("yucca_palm", new String[]{"terrestria"}));
-			Composters.addTerrestriaComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
-			woodTypes.add(Pair.of("scorched", new String[]{"cinderscapes"}));
-			woodTypes.add(Pair.of("umbral", new String[]{"cinderscapes"}));
-			Composters.addCinderscapesComposters();
-		}
-		if (FabricLoader.getInstance().isModLoaded("colorful-azaleas")) {
-			woodTypes.add(Pair.of("azule_azalea", new String[]{"colorful-azaleas"}));
-			woodTypes.add(Pair.of("bright_azalea", new String[]{"colorful-azaleas"}));
-			woodTypes.add(Pair.of("fiss_azalea", new String[]{"colorful-azaleas"}));
-			woodTypes.add(Pair.of("roze_azalea", new String[]{"colorful-azaleas"}));
-			woodTypes.add(Pair.of("tecal_azalea", new String[]{"colorful-azaleas"}));
-			woodTypes.add(Pair.of("titanium_azalea", new String[]{"colorful-azaleas"}));
-			woodTypes.add(Pair.of("walnut_azalea", new String[]{"colorful-azaleas"}));
-			Composters.addColorfulAzaleasComposters();
-		}
-		if(FabricLoader.getInstance().isModLoaded("wilderwild")) {
-			woodTypes.add(Pair.of("baobab", new String[]{"wilderwild"}));
-			//woodTypes.add(Pair.of("cypress", new String[]{"wilderwild"}));
-			Composters.registerWilderWildsComposters();
-		}
-
+		// Farmer POI Registration
 		ModPOITypes.init();
+
 	}
 }

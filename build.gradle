@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.0-SNAPSHOT'
+	id 'fabric-loom' version '1.2-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -29,6 +29,19 @@ dependencies {
 }
 loom {
 	accessWidenerPath = file("src/main/resources/variantcomposters.accesswidener")
+
+	runs {
+		// This adds a new gradle task that runs the datagen API: "gradlew runDatagen"
+		datagen {
+			inherit server
+			name "Data Generation"
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
+			vmArg "-Dfabric-api.datagen.modid=variantcomposters"
+
+			runDir "build/datagen"
+		}
+	}
 }
 
 processResources {

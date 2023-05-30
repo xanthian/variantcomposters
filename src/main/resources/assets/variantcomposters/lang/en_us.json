@@ -1,49 +1,18 @@
 {
-  "itemGroup.variantcomposters.variant_composters": "Variant Composters",
-
+  "_comment": "Rename Vanilla",
   "block.minecraft.composter": "Spruce Composter",
 
+  "variantcomposters.group.variantcomposters": "Variant Composters",
+
   "block.variantcomposters.acacia_composter": "Acacia Composter",
+  "block.variantcomposters.bamboo_composter": "Bamboo Composter",
   "block.variantcomposters.birch_composter": "Birch Composter",
+  "block.variantcomposters.cherry_composter": "Cherry Composter",
+  "block.variantcomposters.crimson_composter": "Crimson Composter",
   "block.variantcomposters.dark_oak_composter": "Dark Oak Composter",
   "block.variantcomposters.jungle_composter": "Jungle Composter",
   "block.variantcomposters.oak_composter": "Oak Composter",
   "block.variantcomposters.mangrove_composter": "Mangrove Composter",
+  "block.variantcomposters.warped_composter": "Warped Composter"
 
-  "block.variantcomposters.crimson_composter": "Crimson Composter",
-  "block.variantcomposters.warped_composter": "Warped Composter",
-
-  "block.variantcomposters.rubber_composter": "Rubber Composter",
-
-  "block.variantcomposters.mango_composter": "Mango Composter",
-
-  "block.variantcomposters.jade_composter": "Jade Birch Composter",
-  "block.variantcomposters.moon_composter": "Moon Composter",
-  "block.variantcomposters.shadow_composter": "Shadow Composter",
-
-  "block.variantcomposters.fir_composter": "Fir Composter",
-
-  "block.variantcomposters.cypress_composter": "Cypress Composter",
-  "block.variantcomposters.hemlock_composter": "Hemlock Composter",
-  "block.variantcomposters.japanese_maple_composter": "Japanese Maple Composter",
-  "block.variantcomposters.rainbow_eucalyptus_composter": "Rainbow Eucalyptus Composter",
-  "block.variantcomposters.redwood_composter": "Redwood Composter",
-  "block.variantcomposters.rubber_composter2": "Rubber Composter",
-  "block.variantcomposters.sakura_composter": "Sakura Composter",
-  "block.variantcomposters.willow_composter": "Willow Composter",
-  "block.variantcomposters.yucca_palm_composter": "Yucca Palm Composter",
-
-  "block.variantcomposters.scorched_composter": "Scorched Composter",
-  "block.variantcomposters.umbral_composter": "Umbral Composter",
-
-  "block.variantcomposters.azule_azalea_composter": "Azule Azalea Composter",
-  "block.variantcomposters.bright_azalea_composter": "Bright Azalea Composter",
-  "block.variantcomposters.fiss_azalea_composter": "Fiss Azalea Composter",
-  "block.variantcomposters.roze_azalea_composter": "Roze Azalea Composter",
-  "block.variantcomposters.tecal_azalea_composter": "Tecal Azalea Composter",
-  "block.variantcomposters.titanium_azalea_composter": "Titanium Azalea Composter",
-  "block.variantcomposters.walnut_azalea_composter": "Walnut Azalea Composter",
-
-  "block.variantcomposters.baobab_composter": "Baobab Composter",
-  "block.variantcomposters.cypress_composter3": "Cypress Composter"
 }

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "variantcomposters:acacia_composter",
+    "variantcomposters:bamboo_composter",
+    "variantcomposters:birch_composter",
+    "variantcomposters:cherry_composter",
+    "variantcomposters:crimson_composter",
+    "variantcomposters:dark_oak_composter",
+    "variantcomposters:jungle_composter",
+    "variantcomposters:mangrove_composter",
+    "variantcomposters:oak_composter",
+    "variantcomposters:warped_composter"
+  ]
+}
