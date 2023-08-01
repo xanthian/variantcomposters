@@ -13,6 +13,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
 import net.xanthian.variantcomposters.block.Composters;
 import net.xanthian.variantcomposters.util.ModPOITypes;
 import net.xanthian.variantcomposters.util.ModRegistries;
@@ -25,7 +26,7 @@ public class Initialise implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// Custom Item Group
+
 		Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
 				.displayName(Text.translatable("variantcomposters.group.variantcomposters"))
 				.icon(() -> new ItemStack(Composters.MANGROVE_COMPOSTER))
@@ -44,13 +45,10 @@ public class Initialise implements ModInitializer {
 				})
 				.build());
 
-		// Composter Registration
 		Composters.registerVanillaComposters();
 
-		// Fuel & Flammable Block registration
 		ModRegistries.registerFuelandFlammable();
 
-		// Farmer POI Registration
 		ModPOITypes.init();
 
 	}

@@ -1,9 +1,5 @@
 {
-  "_comment": "Rename Vanilla",
   "block.minecraft.composter": "Spruce Composter",
-
-  "variantcomposters.group.variantcomposters": "Variant Composters",
-
   "block.variantcomposters.acacia_composter": "Acacia Composter",
   "block.variantcomposters.bamboo_composter": "Bamboo Composter",
   "block.variantcomposters.birch_composter": "Birch Composter",
@@ -11,8 +7,8 @@
   "block.variantcomposters.crimson_composter": "Crimson Composter",
   "block.variantcomposters.dark_oak_composter": "Dark Oak Composter",
   "block.variantcomposters.jungle_composter": "Jungle Composter",
-  "block.variantcomposters.oak_composter": "Oak Composter",
   "block.variantcomposters.mangrove_composter": "Mangrove Composter",
-  "block.variantcomposters.warped_composter": "Warped Composter"
-
+  "block.variantcomposters.oak_composter": "Oak Composter",
+  "block.variantcomposters.warped_composter": "Warped Composter",
+  "variantcomposters.group.variantcomposters": "Variant Composters"
 }
