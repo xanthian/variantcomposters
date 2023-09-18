@@ -2,19 +2,15 @@ package net.xanthian.variantcomposters;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
+import net.fabricmc.loader.api.Version;
+import net.fabricmc.loader.api.metadata.ModMetadata;
 
-import net.xanthian.variantcomposters.block.Composters;
+import net.xanthian.variantcomposters.block.Vanilla;
+import net.xanthian.variantcomposters.block.compatability.*;
+import net.xanthian.variantcomposters.util.ModCreativeTab;
 import net.xanthian.variantcomposters.util.ModPOITypes;
 import net.xanthian.variantcomposters.util.ModRegistries;
 
@@ -22,34 +18,67 @@ public class Initialise implements ModInitializer {
 
 	public static final String MOD_ID = "variantcomposters";
 
-	public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "variantcomposters"));
-
 	@Override
 	public void onInitialize() {
 
-		Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
-				.displayName(Text.translatable("variantcomposters.group.variantcomposters"))
-				.icon(() -> new ItemStack(Composters.MANGROVE_COMPOSTER))
-				.entries((context, entries) -> {
-					entries.add(Composters.ACACIA_COMPOSTER);
-					entries.add(Composters.BAMBOO_COMPOSTER);
-					entries.add(Composters.BIRCH_COMPOSTER);
-					entries.add(Composters.CHERRY_COMPOSTER);
-					entries.add(Composters.CRIMSON_COMPOSTER);
-					entries.add(Composters.DARK_OAK_COMPOSTER);
-					entries.add(Composters.JUNGLE_COMPOSTER);
-					entries.add(Composters.MANGROVE_COMPOSTER);
-					entries.add(Composters.OAK_COMPOSTER);
-					entries.add(Blocks.COMPOSTER); // Spruce
-					entries.add(Composters.WARPED_COMPOSTER);
-				})
-				.build());
+		Vanilla.registerVanillaComposters();
 
-		Composters.registerVanillaComposters();
+		ifModLoaded("ad_astra", AdAstra::registerComposters);
+
+		ifModLoaded("beachparty", BeachParty::registerComposters);
+
+		ifModLoaded("betterarcheology", BetterArcheology::registerComposters);
+
+		ifModLoaded("bewitchment", Bewitchment::registerComposters);
+
+		ifModLoaded("deeperdarker", DeeperAndDarker::registerComposters);
+
+		ifModLoaded("minecells", MineCells::registerComposters);
+
+		ifModLoaded("natures_spirit", NaturesSpirit::registerComposters);
+
+		ifModLoaded("promenade", Promenade::registerComposters);
+
+		ifModLoaded("regions_unexplored", () -> {
+			RegionsUnexplored.registerComposters();
+			if (isModVersion("regions_unexplored", "0.4")) {
+				RegionsUnexplored.register04Composters();
+			} else {
+				RegionsUnexplored.register05Composters();
+			}
+		});
+
+		ifModLoaded("snifferplus", SnifferPlus::registerComposters);
+
+		ifModLoaded("techreborn", TechReborn::registerComposters);
+
+		ifModLoaded("vinery", Vinery::registerComposters);
 
 		ModRegistries.registerFuelandFlammable();
-
+		ModCreativeTab.registerItemGroup();
 		ModPOITypes.init();
 
+		// Datagen Block - disable for client run
+		//SnifferPlus.registerComposters();
+		//RegionsUnexplored.register04Composters();
+		//NaturesSpirit.registerComposters();
+		//DeeperAndDarker.registerComposters();
+		//AdAstra.registerComposters();
+
+	}
+
+	public static void ifModLoaded(String modId, Runnable runnable) {
+		if (FabricLoader.getInstance().isModLoaded(modId)) {
+			runnable.run();
+		}
+	}
+	public static boolean isModVersion(String modId, String ver) {
+		return FabricLoader.getInstance()
+				.getModContainer(modId)
+				.map(ModContainer::getMetadata)
+				.map(ModMetadata::getVersion)
+				.map(Version::getFriendlyString)
+				.filter(version -> version.startsWith(ver))
+				.isPresent();
 	}
 }

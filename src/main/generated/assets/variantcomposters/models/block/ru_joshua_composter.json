@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/ru_joshua_composter_bottom",
+    "inside": "variantcomposters:block/ru_joshua_composter_bottom",
+    "particle": "variantcomposters:block/ru_joshua_composter_side",
+    "side": "variantcomposters:block/ru_joshua_composter_side",
+    "top": "variantcomposters:block/ru_joshua_composter_top"
+  }
+}

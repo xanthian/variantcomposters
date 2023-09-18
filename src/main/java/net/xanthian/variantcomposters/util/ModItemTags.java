@@ -4,6 +4,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+
 import net.xanthian.variantcomposters.Initialise;
 
 public class ModItemTags {

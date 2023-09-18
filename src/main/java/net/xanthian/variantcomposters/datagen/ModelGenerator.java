@@ -8,9 +8,12 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 
-import net.xanthian.variantcomposters.block.Composters;
+import net.xanthian.variantcomposters.block.Vanilla;
+import net.xanthian.variantcomposters.block.compatability.*;
+import net.xanthian.variantcomposters.util.ModModel;
 
 public class ModelGenerator extends FabricModelProvider {
+
     public ModelGenerator(FabricDataOutput output) {
         super(output);
     }
@@ -18,26 +21,69 @@ public class ModelGenerator extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-        registerCustomComposter(blockStateModelGenerator, Composters.ACACIA_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.BAMBOO_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.BIRCH_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.CHERRY_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.CRIMSON_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.DARK_OAK_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.JUNGLE_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.MANGROVE_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.OAK_COMPOSTER);
-        registerCustomComposter(blockStateModelGenerator, Composters.WARPED_COMPOSTER);
+        for (Block block : Vanilla.MOD_COMPOSTERS.values()){
+            createComposter(blockStateModelGenerator, block);
+        }
 
+        // Ad Astra
+        for (Block block : AdAstra.AA_COMPOSTERS.values()) {
+            createComposter(blockStateModelGenerator, block);
+        }
 
+        // Beach Party (Lets Do)
+        createComposter(blockStateModelGenerator, BeachParty.LDBP_PALM_COMPOSTER);
+
+        // Better Archeology
+        createComposter(blockStateModelGenerator, BetterArcheology.BA_ROTTEN_COMPOSTER);
+
+        // Bewitchment
+        for (Block block : Bewitchment.BW_COMPOSTERS.values()){
+            createComposter(blockStateModelGenerator, block);
+        }
+
+        // Deeper & Darker
+        createComposter(blockStateModelGenerator, DeeperAndDarker.DAD_ECHO_COMPOSTER);
+
+        // MineCells
+        createComposter(blockStateModelGenerator, MineCells.MC_PUTRID_COMPOSTER);
+
+        // Natures Spirit
+        for (Block block : NaturesSpirit.NS_COMPOSTERS.values()){
+            createComposter(blockStateModelGenerator, block);
+        }
+
+        // Promenade
+        for (Block block : Promenade.PROM_COMPOSTERS.values()){
+            createComposter(blockStateModelGenerator, block);
+        }
+
+        // Regions Unexplored
+        for (Block block : RegionsUnexplored.RU_COMPOSTERS.values()){
+            createComposter(blockStateModelGenerator, block);
+        }
+        
+        // SnifferPlus
+        createComposter(blockStateModelGenerator, SnifferPlus.SP_STONE_PINE_COMPOSTER);
+        
+        // Tech Reborn
+        createComposter(blockStateModelGenerator, TechReborn.TR_RUBBER_COMPOSTER);
+        
+        // Vinery (Lets Do)
+        createComposter(blockStateModelGenerator, Vinery.LDV_CHERRY_COMPOSTER);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
     }
 
-    public final void registerCustomComposter(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+    public final void createComposter(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+        TextureMap textureMap = TextureMap.of(
+                TextureKey.TOP, TextureMap.getSubId(block, "_top"))
+                .put(TextureKey.BOTTOM, TextureMap.getSubId(block, "_bottom"))
+                .put(TextureKey.INSIDE, TextureMap.getSubId(block, "_bottom"))
+                .put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_side"))
+                .put(TextureKey.SIDE, TextureMap.getSubId(block, "_side"));
+        ModModel.COMPOSTER.upload(block, textureMap, blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(block).with(BlockStateVariant.create()
                 .put(VariantSettings.MODEL, TextureMap.getId(block))).with(When.create().set(Properties.LEVEL_8, 1), BlockStateVariant.create()
                 .put(VariantSettings.MODEL, TextureMap.getSubId(Blocks.COMPOSTER, "_contents1"))).with(When.create().set(Properties.LEVEL_8, 2), BlockStateVariant.create()

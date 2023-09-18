@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/mangrove_composter_bottom",
+    "inside": "variantcomposters:block/mangrove_composter_bottom",
+    "particle": "variantcomposters:block/mangrove_composter_side",
+    "side": "variantcomposters:block/mangrove_composter_side",
+    "top": "variantcomposters:block/mangrove_composter_top"
+  }
+}

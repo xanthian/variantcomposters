@@ -1,0 +1,55 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:and",
+      "values": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "regions_unexplored"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "regions_unexplored:yellow_bioshroom_slab"
+          ]
+        }
+      ]
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ru_yellow_bioshroom_composter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_bioshroom_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "regions_unexplored:yellow_bioshroom_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yellow_bioshroom_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ru_yellow_bioshroom_composter"
+    ]
+  },
+  "sends_telemetry_event": false
+}

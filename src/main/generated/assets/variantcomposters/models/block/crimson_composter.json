@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/crimson_composter_bottom",
+    "inside": "variantcomposters:block/crimson_composter_bottom",
+    "particle": "variantcomposters:block/crimson_composter_side",
+    "side": "variantcomposters:block/crimson_composter_side",
+    "top": "variantcomposters:block/crimson_composter_top"
+  }
+}

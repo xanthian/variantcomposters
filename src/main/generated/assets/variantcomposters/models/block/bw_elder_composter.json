@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/bw_elder_composter_bottom",
+    "inside": "variantcomposters:block/bw_elder_composter_bottom",
+    "particle": "variantcomposters:block/bw_elder_composter_side",
+    "side": "variantcomposters:block/bw_elder_composter_side",
+    "top": "variantcomposters:block/bw_elder_composter_top"
+  }
+}

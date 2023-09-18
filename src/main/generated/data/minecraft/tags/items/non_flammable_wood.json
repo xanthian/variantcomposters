@@ -2,6 +2,26 @@
   "replace": false,
   "values": [
     "variantcomposters:crimson_composter",
-    "variantcomposters:warped_composter"
+    "variantcomposters:warped_composter",
+    {
+      "id": "variantcomposters:prom_dark_amaranth_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_brimwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_cobalt_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_dead_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_yellow_bioshroom_composter",
+      "required": false
+    }
   ]
 }

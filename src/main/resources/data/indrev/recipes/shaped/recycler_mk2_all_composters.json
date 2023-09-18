@@ -1,0 +1,39 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "indrev"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DCD",
+    "NMN",
+    "SBS"
+  ],
+  "key": {
+    "M": {
+      "item": "indrev:machine_block"
+    },
+    "C": {
+      "item": "indrev:circuit_mk2"
+    },
+    "N": {
+      "item": "indrev:nikolite_dust"
+    },
+    "D": {
+      "tag": "variantcomposters:composters"
+    },
+    "S": {
+      "tag": "c:silver_plates"
+    },
+    "B": {
+      "item": "indrev:battery"
+    }
+  },
+  "result": {
+    "item": "indrev:recycler_mk2"
+  }
+}

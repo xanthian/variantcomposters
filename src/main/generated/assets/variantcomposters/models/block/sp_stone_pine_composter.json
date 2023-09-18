@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/sp_stone_pine_composter_bottom",
+    "inside": "variantcomposters:block/sp_stone_pine_composter_bottom",
+    "particle": "variantcomposters:block/sp_stone_pine_composter_side",
+    "side": "variantcomposters:block/sp_stone_pine_composter_side",
+    "top": "variantcomposters:block/sp_stone_pine_composter_top"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/mc_putrid_composter_bottom",
+    "inside": "variantcomposters:block/mc_putrid_composter_bottom",
+    "particle": "variantcomposters:block/mc_putrid_composter_side",
+    "side": "variantcomposters:block/mc_putrid_composter_side",
+    "top": "variantcomposters:block/mc_putrid_composter_top"
+  }
+}
