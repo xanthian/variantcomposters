@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -21,15 +21,13 @@ import net.xanthian.variantcomposters.block.Vanilla;
 import net.xanthian.variantcomposters.block.compatability.*;
 import net.xanthian.variantcomposters.util.ModItemTags;
 
-import java.util.function.Consumer;
-
 public class RecipeGenerator extends FabricRecipeProvider {
     public RecipeGenerator(FabricDataOutput output) {
         super(output);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerComposterRecipe(exporter, Vanilla.ACACIA_COMPOSTER, Blocks.ACACIA_SLAB);
         offerComposterRecipe(exporter, Vanilla.BAMBOO_COMPOSTER, Blocks.BAMBOO_SLAB);
@@ -143,7 +141,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
 
     }
 
-    public static void offerComposterRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible composter, ItemConvertible slab) {
+    public static void offerComposterRecipe(RecipeExporter exporter, ItemConvertible composter, ItemConvertible slab) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, composter)
                 .input('#', slab)
                 .pattern("# #").pattern("# #").pattern("###")
