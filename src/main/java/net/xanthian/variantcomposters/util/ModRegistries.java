@@ -2,10 +2,8 @@ package net.xanthian.variantcomposters.util;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
-
 import net.xanthian.variantcomposters.block.Vanilla;
 import net.xanthian.variantcomposters.block.compatability.*;
 
@@ -49,6 +47,9 @@ public class ModRegistries {
         }
         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
             registry.add(DeeperAndDarker.DAD_ECHO_COMPOSTER, 30, 20);
+        }
+        if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
+            registry.add(EldritchEnd.EE_PRIMORDIAL_COMPOSTER, 30, 20);
         }
         if (FabricLoader.getInstance().isModLoaded("minecells")) {
             registry.add(MineCells.MC_PUTRID_COMPOSTER, 30, 20);
@@ -144,6 +145,9 @@ public class ModRegistries {
         }
         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
             registry.add(DeeperAndDarker.DAD_ECHO_COMPOSTER, 300);
+        }
+        if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
+            registry.add(EldritchEnd.EE_PRIMORDIAL_COMPOSTER, 300);
         }
         if (FabricLoader.getInstance().isModLoaded("minecells")) {
             registry.add(MineCells.MC_PUTRID_COMPOSTER, 300);

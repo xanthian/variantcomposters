@@ -1,26 +1,56 @@
 {
   "replace": false,
   "values": [
-    "variantcomposters:acacia_composter",
-    "variantcomposters:bamboo_composter",
-    "variantcomposters:birch_composter",
-    "variantcomposters:cherry_composter",
-    "variantcomposters:crimson_composter",
-    "variantcomposters:dark_oak_composter",
-    "variantcomposters:jungle_composter",
-    "variantcomposters:mangrove_composter",
-    "variantcomposters:oak_composter",
-    "variantcomposters:warped_composter",
+    {
+      "id": "variantcomposters:crimson_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:birch_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:oak_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:warped_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:bamboo_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:acacia_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:dark_oak_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:jungle_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:mangrove_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:cherry_composter",
+      "required": false
+    },
     {
       "id": "variantcomposters:aa_aeronos_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:aa_glacian_composter",
+      "id": "variantcomposters:aa_strophar_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:aa_stropar_composter",
+      "id": "variantcomposters:aa_glacian_composter",
       "required": false
     },
     {
@@ -32,7 +62,7 @@
       "required": false
     },
     {
-      "id": "variantcomposters:bw_cypress_composter",
+      "id": "variantcomposters:bw_juniper_composter",
       "required": false
     },
     {
@@ -40,11 +70,11 @@
       "required": false
     },
     {
-      "id": "variantcomposters:bw_elder_composter",
+      "id": "variantcomposters:bw_cypress_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:bw_juniper_composter",
+      "id": "variantcomposters:bw_elder_composter",
       "required": false
     },
     {
@@ -52,27 +82,11 @@
       "required": false
     },
     {
+      "id": "variantcomposters:ee_primordial_composter",
+      "required": false
+    },
+    {
       "id": "variantcomposters:mc_putrid_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ns_aspen_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ns_cypress_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ns_fir_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ns_joshua_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ns_maple_composter",
       "required": false
     },
     {
@@ -80,11 +94,11 @@
       "required": false
     },
     {
-      "id": "variantcomposters:ns_redwood_composter",
+      "id": "variantcomposters:ns_fir_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:ns_sugi_composter",
+      "id": "variantcomposters:ns_redwood_composter",
       "required": false
     },
     {
@@ -92,11 +106,27 @@
       "required": false
     },
     {
+      "id": "variantcomposters:ns_sugi_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_cypress_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_aspen_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_joshua_composter",
+      "required": false
+    },
+    {
       "id": "variantcomposters:ns_wisteria_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:prom_dark_amaranth_composter",
+      "id": "variantcomposters:ns_maple_composter",
       "required": false
     },
     {
@@ -104,131 +134,19 @@
       "required": false
     },
     {
-      "id": "variantcomposters:prom_palm_composter",
-      "required": false
-    },
-    {
       "id": "variantcomposters:prom_sakura_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:ru_alpha_oak_composter",
+      "id": "variantcomposters:prom_dark_amaranth_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:ru_baobab_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_black_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_blackwood_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_blue_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_brown_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_cherry_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_cyan_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_cypress_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_dead_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_eucalyptus_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_green_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_gray_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_joshua_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_larch_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_light_blue_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_light_gray_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_lime_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_magenta_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_maple_composter",
+      "id": "variantcomposters:prom_palm_composter",
       "required": false
     },
     {
       "id": "variantcomposters:ru_mauve_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_orange_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_palm_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_pine_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_pink_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_purple_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_red_painted_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_redwood_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_sculkwood_composter",
-      "required": false
-    },
-    {
-      "id": "variantcomposters:ru_white_painted_composter",
       "required": false
     },
     {
@@ -240,15 +158,43 @@
       "required": false
     },
     {
-      "id": "variantcomposters:ru_brimwood_composter",
+      "id": "variantcomposters:ru_cherry_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:ru_cobalt_composter",
+      "id": "variantcomposters:ru_alpha_oak_composter",
       "required": false
     },
     {
-      "id": "variantcomposters:ru_kapok_composter",
+      "id": "variantcomposters:ru_blackwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_cyan_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_maple_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_brown_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_cypress_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_eucalyptus_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_pine_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_magenta_painted_composter",
       "required": false
     },
     {
@@ -256,11 +202,99 @@
       "required": false
     },
     {
+      "id": "variantcomposters:ru_sculkwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_light_blue_painted_composter",
+      "required": false
+    },
+    {
       "id": "variantcomposters:ru_socotra_composter",
       "required": false
     },
     {
+      "id": "variantcomposters:ru_black_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_palm_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_purple_painted_composter",
+      "required": false
+    },
+    {
       "id": "variantcomposters:ru_yellow_bioshroom_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_brimwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_blue_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_green_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_joshua_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_baobab_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_cobalt_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_red_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_white_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_kapok_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_pink_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_redwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_lime_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_light_gray_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_larch_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_dead_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_gray_painted_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ru_orange_painted_composter",
       "required": false
     },
     {

@@ -2,7 +2,6 @@ package net.xanthian.variantcomposters.util;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -11,7 +10,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-
 import net.xanthian.variantcomposters.Initialise;
 import net.xanthian.variantcomposters.block.Vanilla;
 import net.xanthian.variantcomposters.block.compatability.*;
@@ -51,13 +49,16 @@ public class ModCreativeTab {
                         if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
                             entries.add(BetterArcheology.BA_ROTTEN_COMPOSTER);
                         }
-                        if (FabricLoader.getInstance().isModLoaded("bewitchment")){
+                        if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
                             for (Block block : Bewitchment.BW_COMPOSTERS.values()) {
                                 entries.add(block);
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
                             entries.add(DeeperAndDarker.DAD_ECHO_COMPOSTER);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
+                            entries.add(EldritchEnd.EE_PRIMORDIAL_COMPOSTER);
                         }
                         if (FabricLoader.getInstance().isModLoaded("minecells")) {
                             entries.add(MineCells.MC_PUTRID_COMPOSTER);
@@ -106,8 +107,7 @@ public class ModCreativeTab {
                             if (isModVersion("regions_unexplored", "0.4")) {
                                 entries.add(RegionsUnexplored.RU_CHERRY_COMPOSTER);
                                 entries.add(RegionsUnexplored.RU_SCULKWOOD_COMPOSTER);
-                            }
-                            else {
+                            } else {
                                 entries.add(RegionsUnexplored.RU_BRIMWOOD_COMPOSTER);
                                 entries.add(RegionsUnexplored.RU_COBALT_COMPOSTER);
                                 entries.add(RegionsUnexplored.RU_KAPOK_COMPOSTER);

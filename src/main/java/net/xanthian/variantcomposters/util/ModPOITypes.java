@@ -2,14 +2,12 @@ package net.xanthian.variantcomposters.util;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraft.world.poi.PointOfInterestTypes;
-
 import net.xanthian.variantcomposters.block.VariantComposterBlock;
 import net.xanthian.variantcomposters.mixin.PointOfInterestTypesAccessor;
 

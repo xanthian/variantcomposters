@@ -2,7 +2,6 @@ package net.xanthian.variantcomposters;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-
 import net.xanthian.variantcomposters.datagen.*;
 
 public class DataGenerator implements DataGeneratorEntrypoint {

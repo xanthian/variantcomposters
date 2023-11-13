@@ -89,7 +89,7 @@ public class RegionsUnexplored {
         RU_WILLOW_COMPOSTER = registerComposter("ru_willow_composter");
         RU_YELLOW_PAINTED_COMPOSTER = registerComposter("ru_yellow_painted_composter");
     }
-    
+
     public static void register04Composters() {
         RU_CHERRY_COMPOSTER = registerComposter("ru_cherry_composter");
         RU_SCULKWOOD_COMPOSTER = registerComposter("ru_sculkwood_composter");

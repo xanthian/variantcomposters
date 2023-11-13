@@ -62,6 +62,9 @@ public class RecipeGenerator extends FabricRecipeProvider {
         // Deeper & Darker (disabled)
         //offerComposterRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("deeperdarker")),DeeperAndDarker.DAD_ECHO_COMPOSTER, Registries.ITEM.get(new Identifier("deeperanddarker:echo_slab")));
 
+        // Eldritch End
+        offerComposterRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("eldritch_end")), EldritchEnd.EE_PRIMORDIAL_COMPOSTER, Registries.ITEM.get(new Identifier("eldritch_end:primordial_slab")));
+
         // Minecells
         offerComposterRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("minecells")), MineCells.MC_PUTRID_COMPOSTER, Registries.ITEM.get(new Identifier("minecells:putrid_slab")));
 

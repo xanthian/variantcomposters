@@ -10,15 +10,15 @@ public class ModModel {
 
     public static final Model COMPOSTER;
 
+    static {
+        COMPOSTER = createModel("variantcomposter", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.INSIDE, TextureKey.PARTICLE);
+    }
+
     public static Identifier getBlockId(String id) {
         return new Identifier("variantcomposters", "block/" + id);
     }
 
     public static Model createModel(String parent, TextureKey... requiredTextures) {
         return new Model(Optional.of(getBlockId(parent)), Optional.empty(), requiredTextures);
-    }
-
-    static {
-        COMPOSTER = createModel("variantcomposter", TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE, TextureKey.INSIDE, TextureKey.PARTICLE);
     }
 }

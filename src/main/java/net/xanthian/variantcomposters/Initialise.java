@@ -1,13 +1,10 @@
 package net.xanthian.variantcomposters;
 
 import net.fabricmc.api.ModInitializer;
-
-
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.fabricmc.loader.api.Version;
 import net.fabricmc.loader.api.metadata.ModMetadata;
-
 import net.xanthian.variantcomposters.block.Vanilla;
 import net.xanthian.variantcomposters.block.compatability.*;
 import net.xanthian.variantcomposters.util.ModCreativeTab;
@@ -16,69 +13,72 @@ import net.xanthian.variantcomposters.util.ModRegistries;
 
 public class Initialise implements ModInitializer {
 
-	public static final String MOD_ID = "variantcomposters";
+    public static final String MOD_ID = "variantcomposters";
 
-	@Override
-	public void onInitialize() {
+    public static void ifModLoaded(String modId, Runnable runnable) {
+        if (FabricLoader.getInstance().isModLoaded(modId)) {
+            runnable.run();
+        }
+    }
 
-		Vanilla.registerVanillaComposters();
+    public static boolean isModVersion(String modId, String ver) {
+        return FabricLoader.getInstance()
+                .getModContainer(modId)
+                .map(ModContainer::getMetadata)
+                .map(ModMetadata::getVersion)
+                .map(Version::getFriendlyString)
+                .filter(version -> version.startsWith(ver))
+                .isPresent();
+    }
 
-		ifModLoaded("ad_astra", AdAstra::registerComposters);
+    @Override
+    public void onInitialize() {
 
-		ifModLoaded("beachparty", BeachParty::registerComposters);
+        Vanilla.registerVanillaComposters();
 
-		ifModLoaded("betterarcheology", BetterArcheology::registerComposters);
+        ifModLoaded("ad_astra", AdAstra::registerComposters);
 
-		ifModLoaded("bewitchment", Bewitchment::registerComposters);
+        ifModLoaded("beachparty", BeachParty::registerComposters);
 
-		ifModLoaded("deeperdarker", DeeperAndDarker::registerComposters);
+        ifModLoaded("betterarcheology", BetterArcheology::registerComposters);
 
-		ifModLoaded("minecells", MineCells::registerComposters);
+        ifModLoaded("bewitchment", Bewitchment::registerComposters);
 
-		ifModLoaded("natures_spirit", NaturesSpirit::registerComposters);
+        ifModLoaded("deeperdarker", DeeperAndDarker::registerComposters);
 
-		ifModLoaded("promenade", Promenade::registerComposters);
+        ifModLoaded("eldritch_end", EldritchEnd::registerComposters);
 
-		ifModLoaded("regions_unexplored", () -> {
-			RegionsUnexplored.registerComposters();
-			if (isModVersion("regions_unexplored", "0.4")) {
-				RegionsUnexplored.register04Composters();
-			} else {
-				RegionsUnexplored.register05Composters();
-			}
-		});
+        ifModLoaded("minecells", MineCells::registerComposters);
 
-		ifModLoaded("snifferplus", SnifferPlus::registerComposters);
+        ifModLoaded("natures_spirit", NaturesSpirit::registerComposters);
 
-		ifModLoaded("techreborn", TechReborn::registerComposters);
+        ifModLoaded("promenade", Promenade::registerComposters);
 
-		ifModLoaded("vinery", Vinery::registerComposters);
+        ifModLoaded("regions_unexplored", () -> {
+            RegionsUnexplored.registerComposters();
+            if (isModVersion("regions_unexplored", "0.4")) {
+                RegionsUnexplored.register04Composters();
+            } else {
+                RegionsUnexplored.register05Composters();
+            }
+        });
 
-		ModRegistries.registerFuelandFlammable();
-		ModCreativeTab.registerItemGroup();
-		ModPOITypes.init();
+        ifModLoaded("snifferplus", SnifferPlus::registerComposters);
 
-		// Datagen Block - disable for client run
-		//SnifferPlus.registerComposters();
-		//RegionsUnexplored.register04Composters();
-		//NaturesSpirit.registerComposters();
-		//DeeperAndDarker.registerComposters();
-		//AdAstra.registerComposters();
+        ifModLoaded("techreborn", TechReborn::registerComposters);
 
-	}
+        ifModLoaded("vinery", Vinery::registerComposters);
 
-	public static void ifModLoaded(String modId, Runnable runnable) {
-		if (FabricLoader.getInstance().isModLoaded(modId)) {
-			runnable.run();
-		}
-	}
-	public static boolean isModVersion(String modId, String ver) {
-		return FabricLoader.getInstance()
-				.getModContainer(modId)
-				.map(ModContainer::getMetadata)
-				.map(ModMetadata::getVersion)
-				.map(Version::getFriendlyString)
-				.filter(version -> version.startsWith(ver))
-				.isPresent();
-	}
+        ModRegistries.registerFuelandFlammable();
+        ModCreativeTab.registerItemGroup();
+        ModPOITypes.init();
+
+        // Datagen Block - disable for client run
+        //SnifferPlus.registerComposters();
+        //RegionsUnexplored.register04Composters();
+        //NaturesSpirit.registerComposters();
+        //DeeperAndDarker.registerComposters();
+        //AdAstra.registerComposters();
+
+    }
 }
