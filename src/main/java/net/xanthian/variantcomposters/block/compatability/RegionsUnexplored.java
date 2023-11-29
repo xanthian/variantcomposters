@@ -16,7 +16,7 @@ public class RegionsUnexplored {
 
     public static Map<Identifier, Block> RU_COMPOSTERS = Maps.newHashMap();
 
-    public static Block RU_ALPHA_OAK_COMPOSTER;
+    public static Block RU_ALPHA_COMPOSTER;
     public static Block RU_BAOBAB_COMPOSTER;
     public static Block RU_BLACK_PAINTED_COMPOSTER;
     public static Block RU_BLACKWOOD_COMPOSTER;
@@ -50,15 +50,18 @@ public class RegionsUnexplored {
     public static Block RU_CHERRY_COMPOSTER;
     public static Block RU_SCULKWOOD_COMPOSTER;
 
+    public static Block RU_BLUE_BIOSHROOM_COMPOSTER;
     public static Block RU_BRIMWOOD_COMPOSTER;
     public static Block RU_COBALT_COMPOSTER;
+    public static Block RU_GREEN_BIOSHROOM_COMPOSTER;
     public static Block RU_KAPOK_COMPOSTER;
     public static Block RU_MAGNOLIA_COMPOSTER;
+    public static Block RU_PINK_BIOSHROOM_COMPOSTER;
     public static Block RU_SOCOTRA_COMPOSTER;
     public static Block RU_YELLOW_BIOSHROOM_COMPOSTER;
 
     public static void registerComposters() {
-        RU_ALPHA_OAK_COMPOSTER = registerComposter("ru_alpha_oak_composter");
+        RU_ALPHA_COMPOSTER = registerComposter("ru_alpha_composter");
         RU_BAOBAB_COMPOSTER = registerComposter("ru_baobab_composter");
         RU_BLACK_PAINTED_COMPOSTER = registerComposter("ru_black_painted_composter");
         RU_BLACKWOOD_COMPOSTER = registerComposter("ru_blackwood_composter");
@@ -88,24 +91,23 @@ public class RegionsUnexplored {
         RU_WHITE_PAINTED_COMPOSTER = registerComposter("ru_white_painted_composter");
         RU_WILLOW_COMPOSTER = registerComposter("ru_willow_composter");
         RU_YELLOW_PAINTED_COMPOSTER = registerComposter("ru_yellow_painted_composter");
-    }
 
-    public static void register04Composters() {
         RU_CHERRY_COMPOSTER = registerComposter("ru_cherry_composter");
         RU_SCULKWOOD_COMPOSTER = registerComposter("ru_sculkwood_composter");
-    }
 
-    public static void register05Composters() {
+        RU_BLUE_BIOSHROOM_COMPOSTER = registerComposter("ru_blue_bioshroom_composter");
         RU_BRIMWOOD_COMPOSTER = registerComposter("ru_brimwood_composter");
         RU_COBALT_COMPOSTER = registerComposter("ru_cobalt_composter");
+        RU_GREEN_BIOSHROOM_COMPOSTER = registerComposter("ru_green_bioshroom_composter");
         RU_KAPOK_COMPOSTER = registerComposter("ru_kapok_composter");
         RU_MAGNOLIA_COMPOSTER = registerComposter("ru_magnolia_composter");
+        RU_PINK_BIOSHROOM_COMPOSTER = registerComposter("ru_pink_bioshroom_composter");
         RU_SOCOTRA_COMPOSTER = registerComposter("ru_socotra_composter");
         RU_YELLOW_BIOSHROOM_COMPOSTER = registerComposter("ru_yellow_bioshroom_composter");
     }
 
     public static Block register(String name, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
+        Identifier identifier = new Identifier(Initialise.MOD_ID, name);
         Registry.register(Registries.BLOCK, identifier, block);
         RU_COMPOSTERS.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));

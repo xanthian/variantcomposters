@@ -27,6 +27,12 @@ public class NaturesSpirit {
     public static Block NS_WILLOW_COMPOSTER;
     public static Block NS_WISTERIA_COMPOSTER;
 
+    public static Block NS_CEDAR_COMPOSTER;
+    public static Block NS_COCONUT_COMPOSTER;
+    public static Block NS_GHAF_COMPOSTER;
+    public static Block NS_LARCH_COMPOSTER;
+    public static Block NS_PALO_VERDE_COMPOSTER;
+
     public static void registerComposters() {
         NS_ASPEN_COMPOSTER = registerComposter("ns_aspen_composter");
         NS_CYPRESS_COMPOSTER = registerComposter("ns_cypress_composter");
@@ -38,10 +44,16 @@ public class NaturesSpirit {
         NS_SUGI_COMPOSTER = registerComposter("ns_sugi_composter");
         NS_WILLOW_COMPOSTER = registerComposter("ns_willow_composter");
         NS_WISTERIA_COMPOSTER = registerComposter("ns_wisteria_composter");
+
+        NS_CEDAR_COMPOSTER = registerComposter("ns_cedar_composter");
+        NS_COCONUT_COMPOSTER = registerComposter("ns_coconut_composter");
+        NS_GHAF_COMPOSTER = registerComposter("ns_ghaf_composter");
+        NS_LARCH_COMPOSTER = registerComposter("ns_larch_composter");
+        NS_PALO_VERDE_COMPOSTER = registerComposter("ns_palo_verde_composter");
     }
 
     private static Block register(String name, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
+        Identifier identifier = new Identifier(Initialise.MOD_ID, name);
         Registry.register(Registries.BLOCK, identifier, block);
         NS_COMPOSTERS.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));

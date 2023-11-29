@@ -2,9 +2,6 @@ package net.xanthian.variantcomposters;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
-import net.fabricmc.loader.api.Version;
-import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.xanthian.variantcomposters.block.Vanilla;
 import net.xanthian.variantcomposters.block.compatability.*;
 import net.xanthian.variantcomposters.util.ModCreativeTab;
@@ -21,16 +18,6 @@ public class Initialise implements ModInitializer {
         }
     }
 
-    public static boolean isModVersion(String modId, String ver) {
-        return FabricLoader.getInstance()
-                .getModContainer(modId)
-                .map(ModContainer::getMetadata)
-                .map(ModMetadata::getVersion)
-                .map(Version::getFriendlyString)
-                .filter(version -> version.startsWith(ver))
-                .isPresent();
-    }
-
     @Override
     public void onInitialize() {
 
@@ -44,6 +31,10 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("bewitchment", Bewitchment::registerComposters);
 
+        ifModLoaded("biomemakeover", BiomeMakeover::registerComposters);
+
+        ifModLoaded("blockus", Blockus::registerComposters);
+
         ifModLoaded("deeperdarker", DeeperAndDarker::registerComposters);
 
         ifModLoaded("eldritch_end", EldritchEnd::registerComposters);
@@ -54,14 +45,7 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("promenade", Promenade::registerComposters);
 
-        ifModLoaded("regions_unexplored", () -> {
-            RegionsUnexplored.registerComposters();
-            if (isModVersion("regions_unexplored", "0.4")) {
-                RegionsUnexplored.register04Composters();
-            } else {
-                RegionsUnexplored.register05Composters();
-            }
-        });
+        ifModLoaded("regions_unexplored", RegionsUnexplored::registerComposters);
 
         ifModLoaded("snifferplus", SnifferPlus::registerComposters);
 
@@ -75,10 +59,6 @@ public class Initialise implements ModInitializer {
 
         // Datagen Block - disable for client run
         //SnifferPlus.registerComposters();
-        //RegionsUnexplored.register04Composters();
-        //NaturesSpirit.registerComposters();
-        //DeeperAndDarker.registerComposters();
-        //AdAstra.registerComposters();
 
     }
 }

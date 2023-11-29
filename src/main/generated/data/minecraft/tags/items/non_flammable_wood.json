@@ -4,6 +4,10 @@
     "variantcomposters:crimson_composter",
     "variantcomposters:warped_composter",
     {
+      "id": "variantcomposters:bls_charred_composter",
+      "required": false
+    },
+    {
       "id": "variantcomposters:prom_dark_amaranth_composter",
       "required": false
     },

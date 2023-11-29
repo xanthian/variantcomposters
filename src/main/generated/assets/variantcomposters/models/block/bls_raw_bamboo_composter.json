@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/bls_raw_bamboo_composter_bottom",
+    "inside": "variantcomposters:block/bls_raw_bamboo_composter_bottom",
+    "particle": "variantcomposters:block/bls_raw_bamboo_composter_side",
+    "side": "variantcomposters:block/bls_raw_bamboo_composter_side",
+    "top": "variantcomposters:block/bls_raw_bamboo_composter_top"
+  }
+}

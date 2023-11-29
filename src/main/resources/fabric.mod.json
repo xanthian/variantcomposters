@@ -4,7 +4,9 @@
   "version": "${version}",
   "name": "Variant Composters",
   "description": "Composters from all wood types",
-  "authors": ["Xanthian"],
+  "authors": [
+    "Xanthian"
+  ],
   "contact": {
     "sources": "https://github.com/xanthian/variantcomposters"
   },
@@ -12,11 +14,17 @@
   "icon": "assets/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": ["net.xanthian.variantcomposters.Initialise"],
-    "fabric-datagen": ["net.xanthian.variantcomposters.DataGenerator"]
+    "main": [
+      "net.xanthian.variantcomposters.Initialise"
+    ],
+    "fabric-datagen": [
+      "net.xanthian.variantcomposters.DataGenerator"
+    ]
   },
-    "mixins": ["variantcomposters.mixins.json"],
-    "accessWidener": "variantcomposters.accesswidener",
+  "mixins": [
+    "variantcomposters.mixins.json"
+  ],
+  "accessWidener": "variantcomposters.accesswidener",
   "depends": {
     "fabricloader": ">=0.14.20",
     "fabric": "*",

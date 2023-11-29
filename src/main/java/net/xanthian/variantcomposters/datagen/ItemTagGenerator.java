@@ -2,7 +2,6 @@ package net.xanthian.variantcomposters.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -10,7 +9,6 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
-
 import net.xanthian.variantcomposters.block.Vanilla;
 import net.xanthian.variantcomposters.block.compatability.*;
 
@@ -20,11 +18,11 @@ import java.util.concurrent.CompletableFuture;
 import static net.xanthian.variantcomposters.util.ModItemTags.COMPOSTERS;
 
 public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
+    private static final TagKey<Item> C_JOB_SITE = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:villager_job_sites"));
+
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
-
-    private static final TagKey<Item> C_JOB_SITE = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:villager_job_sites"));
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
@@ -35,6 +33,8 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         registerTags(BeachParty.LDBP_COMPOSTERS);
         registerTags(BetterArcheology.BA_COMPOSTERS);
         registerTags(Bewitchment.BW_COMPOSTERS);
+        registerTags(BiomeMakeover.BM_COMPOSTERS);
+        registerTags(Blockus.BLS_COMPOSTERS);
         registerTags(DeeperAndDarker.DAD_COMPOSTERS);
         registerTags(EldritchEnd.EE_COMPOSTERS);
         registerTags(MineCells.MC_COMPOSTERS);
@@ -48,6 +48,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
                 .add(Item.fromBlock(Vanilla.CRIMSON_COMPOSTER))
                 .add(Item.fromBlock(Vanilla.WARPED_COMPOSTER))
+                .addOptional(new Identifier("variantcomposters:bls_charred_composter"))
                 .addOptional(new Identifier("variantcomposters:prom_dark_amaranth_composter"))
                 .addOptional(new Identifier("variantcomposters:ru_brimwood_composter"))
                 .addOptional(new Identifier("variantcomposters:ru_cobalt_composter"))
@@ -57,6 +58,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(C_JOB_SITE)
                 .addTag(COMPOSTERS);
     }
+
     private void registerTags(Map<Identifier, Block> blockMap) {
         for (Block block : blockMap.values()) {
             Identifier lootTableId = block.getLootTableId();

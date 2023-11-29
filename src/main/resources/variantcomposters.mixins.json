@@ -4,8 +4,8 @@
   "package": "net.xanthian.variantcomposters.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "PointOfInterestTypesAccessor",
-    "FarmerWorkTaskMixin"
+    "FarmerWorkTaskMixin",
+    "PointOfInterestTypesAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
