@@ -63,8 +63,21 @@ public class ModCreativeTab {
                                 entries.add(block);
                             }
                         }
+                        if (FabricLoader.getInstance().isModLoaded("botania")) {
+                            for (Block block : Botania.BOT_COMPOSTERS.values()) {
+                                entries.add(block);
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
+                            for (Block block : Cinderscapes.CS_COMPOSTERS.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
                             entries.add(DeeperAndDarker.DAD_ECHO_COMPOSTER);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+                            entries.add(Desolation.DS_CHARRED_COMPOSTER);
                         }
                         if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
                             entries.add(EldritchEnd.EE_PRIMORDIAL_COMPOSTER);

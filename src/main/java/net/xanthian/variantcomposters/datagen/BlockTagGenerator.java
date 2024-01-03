@@ -35,7 +35,10 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         registerTags(BiomeMakeover.BM_COMPOSTERS);
         registerTags(Blockus.BLS_COMPOSTERS);
         registerTags(Bewitchment.BW_COMPOSTERS);
+        registerTags(Botania.BOT_COMPOSTERS);
+        registerTags(Cinderscapes.CS_COMPOSTERS);
         registerTags(DeeperAndDarker.DAD_COMPOSTERS);
+        registerTags(Desolation.DS_COMPOSTERS);
         registerTags(EldritchEnd.EE_COMPOSTERS);
         registerTags(MineCells.MC_COMPOSTERS);
         registerTags(NaturesSpirit.NS_COMPOSTERS);

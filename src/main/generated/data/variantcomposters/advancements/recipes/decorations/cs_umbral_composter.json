@@ -1,0 +1,55 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:and",
+      "values": [
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "cinderscapes"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "cinderscapes:umbral_slab"
+          ]
+        }
+      ]
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cs_umbral_composter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_umbral_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cinderscapes:umbral_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_umbral_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cs_umbral_composter"
+    ]
+  },
+  "sends_telemetry_event": false
+}

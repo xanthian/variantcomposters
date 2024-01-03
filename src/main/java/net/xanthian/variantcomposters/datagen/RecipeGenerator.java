@@ -56,7 +56,10 @@ public class RecipeGenerator extends FabricRecipeProvider {
         registerComposterRecipe(exporter, Bewitchment.BW_COMPOSTERS, "bewitchment");
         registerComposterRecipe(exporter, BiomeMakeover.BM_COMPOSTERS, "biomemakeover");
         registerComposterRecipe(exporter, Blockus.BLS_COMPOSTERS, "blockus");
+        //registerComposterRecipe(exporter, Botania.BOT_COMPOSTERS, "botania");
+        registerComposterRecipe(exporter, Cinderscapes.CS_COMPOSTERS, "cinderscapes");
         registerComposterRecipe(exporter, DeeperAndDarker.DAD_COMPOSTERS, "deeperdarker");
+        registerComposterRecipe(exporter, Desolation.DS_COMPOSTERS, "desolation");
         registerComposterRecipe(exporter, EldritchEnd.EE_COMPOSTERS, "eldritch_end");
         registerComposterRecipe(exporter, MineCells.MC_COMPOSTERS, "minecells");
         registerComposterRecipe(exporter, NaturesSpirit.NS_COMPOSTERS, "natures_spirit");

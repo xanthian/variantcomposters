@@ -106,7 +106,31 @@
       "required": false
     },
     {
+      "id": "variantcomposters:bot_shimmerwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:bot_dreamwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:bot_livingwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:cs_umbral_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:cs_scorched_composter",
+      "required": false
+    },
+    {
       "id": "variantcomposters:dad_echo_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ds_charred_composter",
       "required": false
     },
     {

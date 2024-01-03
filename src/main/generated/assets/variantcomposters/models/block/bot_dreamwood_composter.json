@@ -1,0 +1,10 @@
+{
+  "parent": "variantcomposters:block/variantcomposter",
+  "textures": {
+    "bottom": "variantcomposters:block/bot_dreamwood_composter_bottom",
+    "inside": "variantcomposters:block/bot_dreamwood_composter_bottom",
+    "particle": "variantcomposters:block/bot_dreamwood_composter_side",
+    "side": "variantcomposters:block/bot_dreamwood_composter_side",
+    "top": "variantcomposters:block/bot_dreamwood_composter_top"
+  }
+}

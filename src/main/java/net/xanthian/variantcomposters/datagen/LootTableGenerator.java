@@ -38,7 +38,10 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         registerLootTables(Bewitchment.BW_COMPOSTERS, "bewitchment");
         registerLootTables(BiomeMakeover.BM_COMPOSTERS, "biome_makeover");
         registerLootTables(Blockus.BLS_COMPOSTERS, "blockus");
+        registerLootTables(Botania.BOT_COMPOSTERS, "botania");
+        registerLootTables(Cinderscapes.CS_COMPOSTERS, "cinderscape");
         registerLootTables(DeeperAndDarker.DAD_COMPOSTERS, "deeperdarker");
+        registerLootTables(Desolation.DS_COMPOSTERS, "desolation");
         registerLootTables(EldritchEnd.EE_COMPOSTERS, "eldritch_end");
         registerLootTables(MineCells.MC_COMPOSTERS, "minecells");
         registerSpecialLootTable(NaturesSpirit.NS_COMPOSTERS, "natures_spirit");

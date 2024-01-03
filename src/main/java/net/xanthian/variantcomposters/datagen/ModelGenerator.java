@@ -55,7 +55,10 @@ public class ModelGenerator extends FabricModelProvider {
         registerModel(blockStateModelGenerator, Bewitchment.BW_COMPOSTERS);
         registerModel(blockStateModelGenerator, BiomeMakeover.BM_COMPOSTERS);
         registerModel(blockStateModelGenerator, Blockus.BLS_COMPOSTERS);
+        registerModel(blockStateModelGenerator, Botania.BOT_COMPOSTERS);
+        registerModel(blockStateModelGenerator, Cinderscapes.CS_COMPOSTERS);
         registerModel(blockStateModelGenerator, DeeperAndDarker.DAD_COMPOSTERS);
+        registerModel(blockStateModelGenerator, Desolation.DS_COMPOSTERS);
         registerModel(blockStateModelGenerator, EldritchEnd.EE_COMPOSTERS);
         registerModel(blockStateModelGenerator, MineCells.MC_COMPOSTERS);
         registerModel(blockStateModelGenerator, NaturesSpirit.NS_COMPOSTERS);

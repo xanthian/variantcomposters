@@ -35,7 +35,13 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("blockus", Blockus::registerComposters);
 
+        ifModLoaded("botania", Botania::registerComposters);
+
+        ifModLoaded("cinderscapes", Cinderscapes::registerComposters);
+
         ifModLoaded("deeperdarker", DeeperAndDarker::registerComposters);
+
+        ifModLoaded("desolation", Desolation::registerComposters);
 
         ifModLoaded("eldritch_end", EldritchEnd::registerComposters);
 
@@ -59,6 +65,7 @@ public class Initialise implements ModInitializer {
 
         // Datagen Block - disable for client run
         //SnifferPlus.registerComposters();
+        //Botania.registerComposters();
 
     }
 }

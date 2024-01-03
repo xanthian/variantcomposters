@@ -6,14 +6,14 @@
         {
           "condition": "fabric:all_mods_loaded",
           "values": [
-            "regions_unexplored"
+            "botania"
           ]
         },
         {
           "condition": "fabric:registry_contains",
           "registry": "minecraft:block",
           "values": [
-            "regions_unexplored:sculkwood_slab"
+            "botania:livingwood_slab"
           ]
         }
       ]
@@ -21,12 +21,12 @@
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_air": {
+    "has_livingwood_slab": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:air"
+              "botania:livingwood_slab"
             ]
           }
         ]
@@ -35,20 +35,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ru_sculkwood_composter"
+        "recipe": "minecraft:bot_livingwood_composter"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_air",
+      "has_livingwood_slab",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ru_sculkwood_composter"
+      "minecraft:bot_livingwood_composter"
     ]
   },
   "sends_telemetry_event": false

@@ -52,8 +52,21 @@ public class ModRegistries {
             registry.add(Blockus.BLS_RAW_BAMBOO_COMPOSTER, 30, 20);
             registry.add(Blockus.BLS_WHITE_OAK_COMPOSTER, 30, 20);
         }
+        if (FabricLoader.getInstance().isModLoaded("botania")) {
+            for (Block block : Botania.BOT_COMPOSTERS.values()) {
+                registry.add(block, 30, 20);
+            }
+        }
+        if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
+            for (Block block : Cinderscapes.CS_COMPOSTERS.values()) {
+                registry.add(block, 30, 20);
+            }
+        }
         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
             registry.add(DeeperAndDarker.DAD_ECHO_COMPOSTER, 30, 20);
+        }
+        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+            registry.add(Desolation.DS_CHARRED_COMPOSTER, 30, 20);
         }
         if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
             registry.add(EldritchEnd.EE_PRIMORDIAL_COMPOSTER, 30, 20);
