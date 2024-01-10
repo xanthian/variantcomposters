@@ -13,7 +13,7 @@
           "condition": "fabric:registry_contains",
           "registry": "minecraft:block",
           "values": [
-            "botania:dreamwood_slab"
+            "botania:dreamwood_planks_slab"
           ]
         }
       ]
@@ -23,7 +23,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "botania:dreamwood_slab"
+      "item": "botania:dreamwood_planks_slab"
     }
   },
   "pattern": [
