@@ -21,55 +21,16 @@ public class ModelGenerator extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
 
-        for (Block block : Vanilla.MOD_COMPOSTERS.values()){
+        for (Block block : Vanilla.VANILLA_COMPOSTERS.values()){
             createComposter(blockStateModelGenerator, block);
         }
-
-        // Ad Astra
-        for (Block block : AdAstra.AA_COMPOSTERS.values()) {
+        for (Block block : Cinderscapes.CS_COMPOSTERS.values()){
             createComposter(blockStateModelGenerator, block);
         }
-
-        // Beach Party (Lets Do)
-        createComposter(blockStateModelGenerator, BeachParty.LDBP_PALM_COMPOSTER);
-
-        // Better Archeology
-        createComposter(blockStateModelGenerator, BetterArcheology.BA_ROTTEN_COMPOSTER);
-
-        // Bewitchment
-        for (Block block : Bewitchment.BW_COMPOSTERS.values()){
-            createComposter(blockStateModelGenerator, block);
-        }
-
-        // Deeper & Darker
-        createComposter(blockStateModelGenerator, DeeperAndDarker.DAD_ECHO_COMPOSTER);
-
-        // MineCells
-        createComposter(blockStateModelGenerator, MineCells.MC_PUTRID_COMPOSTER);
-
-        // Natures Spirit
         for (Block block : NaturesSpirit.NS_COMPOSTERS.values()){
             createComposter(blockStateModelGenerator, block);
         }
-
-        // Promenade
-        for (Block block : Promenade.PROM_COMPOSTERS.values()){
-            createComposter(blockStateModelGenerator, block);
-        }
-
-        // Regions Unexplored
-        for (Block block : RegionsUnexplored.RU_COMPOSTERS.values()){
-            createComposter(blockStateModelGenerator, block);
-        }
-        
-        // SnifferPlus
-        createComposter(blockStateModelGenerator, SnifferPlus.SP_STONE_PINE_COMPOSTER);
-        
-        // Tech Reborn
         createComposter(blockStateModelGenerator, TechReborn.TR_RUBBER_COMPOSTER);
-        
-        // Vinery (Lets Do)
-        createComposter(blockStateModelGenerator, Vinery.LDV_CHERRY_COMPOSTER);
     }
 
     @Override

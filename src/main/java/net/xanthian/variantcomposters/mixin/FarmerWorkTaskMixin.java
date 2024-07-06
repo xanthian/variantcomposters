@@ -8,7 +8,7 @@ import net.minecraft.block.BlockState;
 
 import net.minecraft.entity.ai.brain.task.FarmerWorkTask;
 
-import net.xanthian.variantcomposters.block.VariantComposterBlock;
+import net.minecraft.block.ComposterBlock;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
@@ -17,6 +17,6 @@ public class FarmerWorkTaskMixin {
 
     @WrapOperation(method = "performAdditionalWork", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BlockState;isOf(Lnet/minecraft/block/Block;)Z"))
     boolean variantcomposters$customComposter(BlockState state, Block block, Operation<Boolean> original) {
-        return original.call(state, block) || state.getBlock() instanceof VariantComposterBlock;
+        return original.call(state, block) || state.getBlock() instanceof ComposterBlock;
     }
 }

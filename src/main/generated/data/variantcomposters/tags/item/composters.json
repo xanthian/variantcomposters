@@ -1,0 +1,96 @@
+{
+  "values": [
+    {
+      "id": "variantcomposters:crimson_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:birch_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:oak_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:warped_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:bamboo_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:acacia_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:dark_oak_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:jungle_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:mangrove_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:cherry_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:cs_umbral_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:cs_scorched_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_olive_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_fir_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_redwood_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_willow_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_sugi_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_cypress_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_aspen_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_joshua_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_wisteria_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:ns_maple_composter",
+      "required": false
+    },
+    {
+      "id": "variantcomposters:tr_rubber_composter",
+      "required": false
+    }
+  ]
+}

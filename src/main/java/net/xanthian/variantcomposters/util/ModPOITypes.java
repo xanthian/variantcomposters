@@ -10,7 +10,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraft.world.poi.PointOfInterestTypes;
 
-import net.xanthian.variantcomposters.block.VariantComposterBlock;
+import net.minecraft.block.ComposterBlock;
 import net.xanthian.variantcomposters.mixin.PointOfInterestTypesAccessor;
 
 import java.util.ArrayList;
@@ -21,15 +21,13 @@ public class ModPOITypes {
     public static void init() {
         Map<BlockState, RegistryEntry<PointOfInterestType>> poiStatesToType = PointOfInterestTypesAccessor
                 .getPointOfInterestStatesToType();
-
         RegistryEntry<PointOfInterestType> farmerEntry = Registries.POINT_OF_INTEREST_TYPE
                 .getEntry(PointOfInterestTypes.FARMER).get();
         PointOfInterestType farmerPoiType = Registries.POINT_OF_INTEREST_TYPE.get(PointOfInterestTypes.FARMER);
-        List<BlockState> farmerBlockStates = new ArrayList<BlockState>(farmerPoiType.blockStates);
-        for (Block block : Registries.BLOCK) { // Iterate through all blocks
-            if (block instanceof VariantComposterBlock composterBlock) { // Check if the block is an instance of VariantBarrelBlock
+        List<BlockState> farmerBlockStates = new ArrayList<>(farmerPoiType.blockStates);
+        for (Block block : Registries.BLOCK) {
+            if (block instanceof ComposterBlock composterBlock) {
                 ImmutableList<BlockState> blockStates = composterBlock.getStateManager().getStates();
-
                 for (BlockState blockState : blockStates) {
                     poiStatesToType.putIfAbsent(blockState, farmerEntry);
                 }

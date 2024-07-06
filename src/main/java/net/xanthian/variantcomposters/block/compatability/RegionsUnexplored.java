@@ -1,14 +1,17 @@
 package net.xanthian.variantcomposters.block.compatability;
 
 import com.google.common.collect.Maps;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantcomposters.Initialise;
-import net.xanthian.variantcomposters.block.VariantComposterBlock;
+import net.minecraft.block.ComposterBlock;
 
 import java.util.Map;
 
@@ -46,9 +49,6 @@ public class RegionsUnexplored {
     public static Block RU_WHITE_PAINTED_COMPOSTER;
     public static Block RU_WILLOW_COMPOSTER;
     public static Block RU_YELLOW_PAINTED_COMPOSTER;
-
-    public static Block RU_CHERRY_COMPOSTER;
-    public static Block RU_SCULKWOOD_COMPOSTER;
 
     public static Block RU_BRIMWOOD_COMPOSTER;
     public static Block RU_COBALT_COMPOSTER;
@@ -88,14 +88,7 @@ public class RegionsUnexplored {
         RU_WHITE_PAINTED_COMPOSTER = registerComposter("ru_white_painted_composter");
         RU_WILLOW_COMPOSTER = registerComposter("ru_willow_composter");
         RU_YELLOW_PAINTED_COMPOSTER = registerComposter("ru_yellow_painted_composter");
-    }
-    
-    public static void register04Composters() {
-        RU_CHERRY_COMPOSTER = registerComposter("ru_cherry_composter");
-        RU_SCULKWOOD_COMPOSTER = registerComposter("ru_sculkwood_composter");
-    }
 
-    public static void register05Composters() {
         RU_BRIMWOOD_COMPOSTER = registerComposter("ru_brimwood_composter");
         RU_COBALT_COMPOSTER = registerComposter("ru_cobalt_composter");
         RU_KAPOK_COMPOSTER = registerComposter("ru_kapok_composter");
@@ -105,14 +98,14 @@ public class RegionsUnexplored {
     }
 
     public static Block register(String name, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
+        Identifier identifier = Identifier.of(Initialise.MOD_ID, name.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
         RU_COMPOSTERS.put(identifier, block);
-        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new Item.Settings()));
         return block;
     }
 
     public static Block registerComposter(String name) {
-        return register(name, new VariantComposterBlock());
+        return register(name, new ComposterBlock(AbstractBlock.Settings.copy(Blocks.COMPOSTER)));
     }
 }

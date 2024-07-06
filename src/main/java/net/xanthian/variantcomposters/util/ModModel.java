@@ -11,7 +11,7 @@ public class ModModel {
     public static final Model COMPOSTER;
 
     public static Identifier getBlockId(String id) {
-        return new Identifier("variantcomposters", "block/" + id);
+        return Identifier.of("variantcomposters", "block/" + id);
     }
 
     public static Model createModel(String parent, TextureKey... requiredTextures) {
