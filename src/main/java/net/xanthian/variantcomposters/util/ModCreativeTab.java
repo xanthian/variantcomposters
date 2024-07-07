@@ -52,7 +52,7 @@ public class ModCreativeTab {
                             entries.add(TechReborn.TR_RUBBER_COMPOSTER);
                         }
                     })
-                    //.texture(Identifier.ofVanilla( "textures/gui/container/creative_inventory/tab_variantcomposters.png")).noRenderedName()
+                    .texture(Identifier.ofVanilla( "textures/gui/container/creative_inventory/tab_variantcomposters.png")).noRenderedName()
                     .build());
 
     public static void registerItemGroup() {
